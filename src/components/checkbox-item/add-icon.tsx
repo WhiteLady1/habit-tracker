@@ -6,7 +6,7 @@ interface AddIconProps {
   size?: number;
   height?: number;
   width?: number;
-}
+};
 
 export const AddIcon: React.FC<AddIconProps>  = ({
   fill = 'currentColor',
