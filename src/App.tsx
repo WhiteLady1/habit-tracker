@@ -10,7 +10,7 @@ function App() {
           <h1 className="text-3xl font-bold underline">
             Habit tracker
           </h1>
-          <Button color='primary'>Text NextUI</Button>
+          <Button color="primary">Text NextUI</Button>
         </header>
       </div>
     </NextUIProvider>
