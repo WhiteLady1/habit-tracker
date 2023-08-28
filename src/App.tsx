@@ -1,6 +1,7 @@
 import React from 'react';
-import { NextUIProvider, Button } from '@nextui-org/react';
+import { NextUIProvider } from '@nextui-org/react';
 import './App.css';
+import { CheckboxItem } from './components';
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
           <h1 className="text-3xl font-bold underline">
             Habit tracker
           </h1>
-          <Button color="primary">Text NextUI</Button>
+          <CheckboxItem
+            text="Meditation for beginers, doing next lesson"
+            onCheckboxChange={(isSelected) => console.log(isSelected)}
+          />
         </header>
       </div>
     </NextUIProvider>
