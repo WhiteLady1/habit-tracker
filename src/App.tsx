@@ -1,7 +1,10 @@
 import React from 'react';
 import { NextUIProvider } from '@nextui-org/react';
 import './App.css';
-import { CheckboxItem } from './components';
+import { Calendar, CheckboxItem } from './components';
+
+const DAYS_OK = [new Date(2023, 8, 15), new Date(2023, 8, 17)];
+const DAYS_FAIL = [new Date(2023, 8, 16), new Date(2023, 8, 19)];
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
             text="Meditation for beginers, doing next lesson"
             onCheckboxChange={(isSelected) => console.log(isSelected)}
           />
+          <Calendar fulfilledDays={DAYS_OK} unFulfilledDays={DAYS_FAIL} />
         </header>
       </div>
     </NextUIProvider>
