@@ -1,7 +1,11 @@
 import React from 'react';
 import { NextUIProvider } from '@nextui-org/react';
 import './App.css';
-import { CheckboxList } from './components';
+
+import { Calendar, CheckboxList } from './components';
+
+const DAYS_OK = [new Date(2023, 8, 15), new Date(2023, 8, 17)];
+const DAYS_FAIL = [new Date(2023, 8, 16), new Date(2023, 8, 19)];
 
 const LIST = [
   {
@@ -26,6 +30,7 @@ function App() {
           <h1 className="text-3xl font-bold underline">
             Habit tracker
           </h1>
+          <Calendar fulfilledDays={DAYS_OK} unFulfilledDays={DAYS_FAIL} />
           <CheckboxList list={LIST}/>
         </header>
       </div>
